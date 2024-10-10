@@ -8,6 +8,7 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
+        android:textColor="#FFFFFF"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/min_label"
@@ -18,6 +19,7 @@
 
     <TextView
         android:id="@+id/forcast_day"
+        android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -29,6 +31,7 @@
     <TextView
         android:id="@+id/forcast_min"
         android:layout_width="wrap_content"
+        android:textColor="#FFFFFF"
         android:layout_height="wrap_content"
         android:text="@string/forcast_min"
         app:layout_constraintBottom_toBottomOf="@+id/forcast_day"
@@ -38,6 +41,7 @@
 
     <TextView
         android:id="@+id/max_label"
+        android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -48,6 +52,7 @@
 
     <TextView
         android:id="@+id/forcast_max"
+        android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"

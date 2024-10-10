@@ -7,6 +7,7 @@ import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -70,13 +71,28 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     override fun showDialogInfo(forecast: ForecastMain) {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Titulo de Dialogo")
-        builder.setMessage("Humidity: "+ forecast.humidity + ", Pressure: "+forecast.pressure)
-        builder.setPositiveButton("aceptar"){dialog,_->
-            dialog.dismiss()
+        // Inflate the custom dialog layout
+        val dialogView = layoutInflater.inflate(R.layout.mydialog, null)
+
+        // Find the views in the custom layout
+        val dialogTitle = dialogView.findViewById<TextView>(R.id.dialog_title)
+        val dialogButton = dialogView.findViewById<Button>(R.id.dialog_button)
+
+        // Set the data for the dialog
+        dialogTitle.text = "Humidity: ${forecast.humidity}, Pressure: ${forecast.pressure}"
+
+        // Create the AlertDialog using the custom layout
+        val dialogBuilder = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        // Set the click listener for the button
+        dialogButton.setOnClickListener {
+            dialogBuilder.dismiss()
         }
-        builder.show()
+
+        // Show the dialog
+        dialogBuilder.show()
     }
 
     private fun checklocationPermission(){
