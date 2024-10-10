@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797463551005",
+    "project_id": "appclima-32568",
+    "storage_bucket": "appclima-32568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797463551005:android:6e86372b94933a53413af4",
+        "android_client_info": {
+          "package_name": "com.example.appclima"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCSMTNoHOZdTByQRGF_JcX0PoRb4HGBgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
