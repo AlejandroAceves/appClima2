@@ -1,6 +1,7 @@
 package com.example.appclima.ui
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
@@ -21,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appclima.R
 import com.example.appclima.data.model.Forecast
 import com.example.appclima.data.model.ForecastMain
+import com.example.appclima.ui.CitiesActivity.CitiesActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import okio.IOException
@@ -43,7 +45,10 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         }
         presenter = MainPresenter(this,this)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
+    val btnIr = findViewById<Button>(R.id.cities).setOnClickListener{
+        val intent = Intent(this, CitiesActivity::class.java)
+        startActivity(intent)
+    }
         checklocationPermission()
     }
 
